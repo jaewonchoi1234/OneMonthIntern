@@ -30,6 +30,8 @@ public class JwtUtil {
 	public void init() {
 		key = new SecretKeySpec(secretKey.getBytes(), SignatureAlgorithm.HS256.getJcaName());
 	}
+	
+	
 	//AcessToken 생성
 	public String createAccessToken(String username) {
 		return Jwts.builder()
