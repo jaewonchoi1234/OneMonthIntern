@@ -22,4 +22,8 @@ public class SignUpResponseDto {
 		nickname = user.getNickname();
 		authorities = user.getAuthorities();
 	}
+
+
+
+
 }

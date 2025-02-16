@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.intern.assignment.repository.UserRepository;
 
 import com.intern.assignment.entity.User;
-@Service
+@Service 
 public class UserDetailsServiceImpl implements UserDetailsService {
 	private final UserRepository userRepository;
 	
