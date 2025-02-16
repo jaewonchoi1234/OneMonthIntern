@@ -46,7 +46,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable()) // JWT는 CSRF 필요 없음
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // 세션 사용 안함
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/signup", "/sign", "/swagger-ui/**").permitAll()  // 특정 경로 허용
+                .requestMatchers("/signup", "/sign" ,"/v3/**", "/swagger-ui/**").permitAll()  // 특정 경로 허용
                 .anyRequest().authenticated()  // 나머지 경로는 인증 필요
             )
             .addFilterBefore(new JwtAuthenticationFilter(authenticationManager, jwtUtil), UsernamePasswordAuthenticationFilter.class) // 로그인 필터

@@ -50,4 +50,5 @@ public class UserService {
 		user.setAuthorities(authorities);
 		return new SignUpResponseDto(userRepository.save(user));
 	}
+
 }
